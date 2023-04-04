@@ -1,0 +1,43 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+}
+
+/* Font */
+/* Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Noto Sans EN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
+
+@font-face {
+  font-family: 'Khyay';
+  src: url('/font/Khyay-Regular.ttf') format('truetype');
+}
+
+/* Variables */
+:root {
+  --main-color: #003CAF;
+  --cloudy-gray: #F9F9F9;
+  --light-gray: #999;
+  --dark-gray: #333;
+  --normal-txt-color: #555;
+
+  --sub-title-size: 60px;
+  --sub-title-desc-size: 20px;
+  --normal-txt-size: 18px;
+}

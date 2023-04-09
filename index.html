@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
   <!-- Fontawesome -->
   <script src="https://kit.fontawesome.com/df4f7d9123.js" crossorigin="anonymous"></script>
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  <!-- Custom CSS -->
+  <!-- Custom JS & CSS -->
+  <script defer src="./js/script.js"></script>
+  <script defer src="./js/modal.js"></script>
   <link rel="stylesheet" href="/css/style.css">
-
   <title>Ahn JungHyun Portfolio</title>
 </head>
 <body>
@@ -170,9 +173,9 @@
       <h2 class="sub-title">Development</h2>
       <h3 class="sub-title-desc">- 개발 작업물 -</h3>
       <div class="development-inner">
-        
       </div>
     </article>
+    <!-- Design -->
     <article id="design-content">
       <h2 class="sub-title">Design</h2>
       <h3 class="sub-title-desc">- 디자인 작업물 -</h3>
@@ -180,66 +183,683 @@
         <div class="works-box">
           <div class="works-items">
             <ul class="works-items-menu">
-              <li class="all active"><a href="#">ALL</a></li>
-              <li class="card-news"><a href="#">CARD-NEWS</a></li>
-              <li class="blog-skin"><a href="#">BLOG-SKIN</a></li>
-              <li class="homepage"><a href="#">HOMEPAGE</a></li>
-              <li class="etc"><a href="#">ETC</a></li>
+              <li class="works-items-menu-list active" data-filter="*"><span>ALL</span></li>
+              <span class="menu-line">|</span>
+              <li class="works-items-menu-list" data-filter="card-news"><span>CARD-NEWS</span></li>
+              <span class="menu-line">|</span>
+              <li class="works-items-menu-list" data-filter="blog-skin"><span>BLOG-SKIN</span></li>
+              <span class="menu-line">|</span>
+              <li class="works-items-menu-list" data-filter="homepage"><span>HOMEPAGE</span></li>
+              <span class="menu-line">|</span>
+              <li class="works-items-menu-list" data-filter="etc"><span>ETC</span></li>
             </ul>
+            <!-- includes/work-items.html -->
             <div class="works-item">
-              <!-- all/카드뉴스/블로그스킨/홈페이지 디자인/그외 -->
-              <div class="item">
-                <img src="/images/cn1.jpg" alt="">
+              <div class="item" data-type="card-news">
+                <img src="/images/04_design_item1_thum.png" alt="">
                 <div class="item-detail">
                   <h4>MUCON</h4>
                   <p>카드뉴스</p>
                   <button>MORE VIEW</button>
                 </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">서초1인가구지원센터</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">삼행시 공모전 발표 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CX-actwLJVb/">https://www.instagram.com/p/CX-actwLJVb/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item1_img (1).png" alt="">
+                    <img src="./images/04_design_item1_img (2).png" alt="">
+                    <img src="./images/04_design_item1_img (3).png" alt="">
+                    <img src="./images/04_design_item1_img (4).png" alt="">
+                  </span>
+                </div>
               </div>
-              <div class="item">
-                <img src="http://via.placeholder.com/220x220" alt="">
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item2_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>서초1인가구지원센터</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">서초1인가구지원센터</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">연말 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CmaRSgTv7VR/">https://www.instagram.com/p/CmaRSgTv7VR/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item2_img.png" alt="">
+                  </span>
+                </div>
               </div>
-              <div class="item">
-                <img src="http://via.placeholder.com/220x220" alt="">
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item3_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>서초1인가구지원센터</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">서초1인가구지원센터</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/Cek1V0ql7DR/">https://www.instagram.com/p/Cek1V0ql7DR/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item3_img (1).png" alt="">
+                      <img src="./images/04_design_item3_img (2).png" alt="">
+                      <img src="./images/04_design_item3_img (3).png" alt="">
+                      <img src="./images/04_design_item3_img (4).png" alt="">
+                  </span>
+                </div>
               </div>
-              <div class="item">
-                <img src="http://via.placeholder.com/220x220" alt="">
+              <div class="item" data-type="etc">
+                <img src="./images/04_design_item4_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>서초1인가구지원센터</h4>
+                  <p>ETC(포스터)</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">서초1인가구지원센터</span>
+                  <span class="item-desc-sort">ETC(포스터)</span>
+                  <span class="item-desc-detail">카드뉴스 포스터 리사이즈</span>
+                  <span class="item-desc-link">
+                    <span>-</span>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item4_img.png" alt="">
+                  </span>
+                </div>
               </div>
+              <div class="item" data-type="etc">
+                <img src="./images/04_design_item5_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>서초1인가구지원센터</h4>
+                  <p>ETC(네임카드)</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">서초1인가구지원센터</span>
+                  <span class="item-desc-sort">ETC(네임카드)</span>
+                  <span class="item-desc-detail">공식 블로그 네임카드 시안 제작</span>
+                  <span class="item-desc-link">
+                    <span>-</span>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item5_img (1).png" alt="">
+                    <img src="./images/04_design_item5_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="homepage">
+                <img src="./images/04_design_item6_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>광주실감콘텐츠큐브(GCC)</h4>
+                  <p>홈페이지 디자인</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">광주실감콘텐츠큐브(GCC)</span>
+                  <span class="item-desc-sort">홈페이지 디자인</span>
+                  <span class="item-desc-detail">홈페이지 시안 제작</span>
+                  <span class="item-desc-link">
+                    <span>-</span>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item6_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item7_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>진명스포아트</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">진명스포아트</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/Cf21-R8LjBi/">https://www.instagram.com/p/Cf21-R8LjBi/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item7_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item8_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>진명스포아트</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">진명스포아트</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CibeQryJFbX/">https://www.instagram.com/p/CibeQryJFbX/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item8_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="etc">
+                <img src="./images/04_design_item9_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>비비런</h4>
+                  <p>ETC(포스터)</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">비비런</span>
+                  <span class="item-desc-sort">ETC(포스터)</span>
+                  <span class="item-desc-detail">비비런 포스터 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://m.blog.naver.com/PostView.naver?blogId=bbrun2022&logNo=222910963559&navType=by">https://m.blog.naver.com/PostView.naver?blogId=bbrun2022&logNo=222910963559&navType=by</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item9_img (1).png" alt="">
+                    <img src="./images/04_design_item9_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="etc">
+                <img src="./images/04_design_item10_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>비비런</h4>
+                  <p>ETC(프로그램북)</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">비비런</span>
+                  <span class="item-desc-sort">ETC(프로그램북)</span>
+                  <span class="item-desc-detail">비비런 프로그램북 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item10_img (1).jpg" alt="">
+                    <img src="./images/04_design_item10_img (2).jpg" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="blog-skin">
+                <img src="./images/04_design_item11_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>비비런</h4>
+                  <p>블로그 스킨</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">비비런</span>
+                  <span class="item-desc-sort">블로그 스킨</span>
+                  <span class="item-desc-detail">비비런 블로그 스킨 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://blog.naver.com/prologue/PrologueList.naver?blogId=bbrun2022">https://blog.naver.com/prologue/PrologueList.naver?blogId=bbrun2022</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item11_img.gif" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item12_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>MU:CON 2022</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">MU:CON 2022</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CkFG0MxPsfN/">https://www.instagram.com/p/CkFG0MxPsfN/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item12_img (1).png" alt="">
+                    <img src="./images/04_design_item12_img (2).png" alt="">
+                    <img src="./images/04_design_item12_img (3).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item13_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>MU:CON 2022</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">MU:CON 2022</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item13_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="etc">
+                <img src="./images/04_design_item14_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>MU:CON 2022</h4>
+                  <p>ETC(프로그램북)</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">MU:CON 2022</span>
+                  <span class="item-desc-sort">ETC(프로그램북)</span>
+                  <span class="item-desc-detail">MU:CON 2022 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item14_img (1).png" alt="">
+                    <img src="./images/04_design_item14_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="homepage">
+                <img src="./images/04_design_item15_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>MU:CON 2022</h4>
+                  <p>홈페이지 디자인</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">MU:CON 2022</span>
+                  <span class="item-desc-sort">홈페이지 디자인</span>
+                  <span class="item-desc-detail">홈페이지 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item15_img (1).png" alt="">
+                    <img src="./images/04_design_item15_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item16_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">국립아시아문화전당</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item16_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item17_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">국립아시아문화전당</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CjCWy7pBRYD/">https://www.instagram.com/p/CjCWy7pBRYD/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item17_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item18_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">국립아시아문화전당</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item18_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item19_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">국립아시아문화전당</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://blog.naver.com/asiaculturecenter/222879296702">https://blog.naver.com/asiaculturecenter/222879296702</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item19_img (1).png" alt="">
+                    <img src="./images/04_design_item19_img (2).png" alt="">
+                    <img src="./images/04_design_item19_img (3).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="blog-skin">
+                <img src="./images/04_design_item20_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>블로그 스킨</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">국립아시아문화전당</span>
+                  <span class="item-desc-sort">블로그 스킨</span>
+                  <span class="item-desc-detail">블로그 스킨 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://blog.naver.com/asiaculturecenter">https://blog.naver.com/asiaculturecenter</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item20_img (1).gif" alt="">
+                    <img src="./images/04_design_item20_img (2).gif" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item21_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">국립아시아문화전당</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">홍보 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.facebook.com/mbcacademy/posts/243083071367220">https://www.facebook.com/mbcacademy/posts/243083071367220</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item21_img (1).png" alt="">
+                    <img src="./images/04_design_item21_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="blog-skin">
+                <img src="./images/04_design_item22_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>국립아시아문화전당</h4>
+                  <p>블로그 스킨</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">목동 로드맵 수학학원</span>
+                  <span class="item-desc-sort">블로그 스킨</span>
+                  <span class="item-desc-detail">블로그 스킨 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://blog.naver.com/prologue/PrologueList.naver?blogId=roadmap_math">https://blog.naver.com/prologue/PrologueList.naver?blogId=roadmap_math</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item22_img.gif" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item23_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>헤이스쿨스 클럽 (남이섬)</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">헤이스쿨스 클럽 (남이섬)</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">홍보 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://blog.naver.com/prologue/PrologueList.naver?blogId=roadmap_math">https://blog.naver.com/prologue/PrologueList.naver?blogId=roadmap_math</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item23_img (1).png" alt="">
+                    <img src="./images/04_design_item23_img (2).png" alt="">
+                    <img src="./images/04_design_item23_img (3).png" alt="">
+                    <img src="./images/04_design_item23_img (4).png" alt="">
+                    <img src="./images/04_design_item23_img (5).png" alt="">
+                    <img src="./images/04_design_item23_img (6).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="blog-skin">
+                <img src="./images/04_design_item24_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>헤이스쿨스 클럽 (남이섬)</h4>
+                  <p>블로그 스킨</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">헤이스쿨스 클럽 (남이섬)</span>
+                  <span class="item-desc-sort">블로그 스킨</span>
+                  <span class="item-desc-detail">블로그 스킨 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item24_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item25_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>해외문화홍보원</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">해외문화홍보원</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item25_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item26_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>해외문화홍보원</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">해외문화홍보원</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">이벤트 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item26_img.png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="homepage">
+                <img src="./images/04_design_item27_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>해외문화홍보원</h4>
+                  <p>홈페이지 디자인</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">해외문화홍보원</span>
+                  <span class="item-desc-sort">홈페이지 디자인</span>
+                  <span class="item-desc-detail">홈페이지 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a>-</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item27_img (1).png" alt="">
+                    <img src="./images/04_design_item27_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item28_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>2022 청도반시축제</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">2022 청도반시축제</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">홍보 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CjW9jrjhkcq/">https://www.instagram.com/p/CjW9jrjhkcq/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item28_img (1).png" alt="">
+                    <img src="./images/04_design_item28_img (2).png" alt="">
+                    <img src="./images/04_design_item28_img (3).png" alt="">
+                    <img src="./images/04_design_item28_img (4).png" alt="">
+                    <img src="./images/04_design_item28_img (5).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="card-news">
+                <img src="./images/04_design_item29_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>2022 청도반시축제</h4>
+                  <p>카드뉴스</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">2022 청도반시축제</span>
+                  <span class="item-desc-sort">카드뉴스</span>
+                  <span class="item-desc-detail">디데이 카드뉴스 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://www.instagram.com/p/CjRomcmviqN/">https://www.instagram.com/p/CjRomcmviqN/</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item29_img (1).png" alt="">
+                    <img src="./images/04_design_item29_img (2).png" alt="">
+                    <img src="./images/04_design_item29_img (3).png" alt="">
+                    <img src="./images/04_design_item29_img (4).png" alt="">
+                    <img src="./images/04_design_item29_img (5).png" alt="">
+                  </span>
+                </div>
+              </div>
+              <div class="item" data-type="blog-skin">
+                <img src="./images/04_design_item30_thum.png" alt="">
+                <div class="item-detail">
+                  <h4>2022 청도반시축제</h4>
+                  <p>블로그 스킨</p>
+                  <button>MORE VIEW</button>
+                </div>
+                <!-- Modal 내용 -->
+                <div class="item-desc">
+                  <span class="item-desc-tit">2022 청도반시축제</span>
+                  <span class="item-desc-sort">블로그 스킨</span>
+                  <span class="item-desc-detail">블로그 스킨 시안 제작</span>
+                  <span class="item-desc-link">
+                    <a target="_blank" href="https://blog.naver.com/cheongdobansi">https://blog.naver.com/cheongdobansi</a>
+                  </span>
+                  <span class="item-desc-img">
+                    <img src="./images/04_design_item30_img (1).png" alt="">
+                    <img src="./images/04_design_item30_img (2).png" alt="">
+                  </span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
     </article>
     <!-- Design Works Modal -->
-    <div class="modal-bg">
+    <div class="modal">
       <div class="modal-box">
+        <div class="close-btn">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
         <div class="modal-box-inner">
-          <div class="close-btn">
-            <i class="fa-solid fa-xmark"></i>
-          </div>
           <div class="modal-desc">
-            <h4>MU:CON</h4>
+            <h4 class="modal-desc-tit">.</h4>
             <div class="bar"></div>
             <ul>
               <li>
                 <dt>CATEGORY</dt>
-                <dd>카드뉴스</dd>
+                <dd class="modal-desc-sort">.</dd>
               </li>
               <li>
                 <dt>DETAIL</dt>
-                <dd>뮤콘 10월 이벤트 설명 카드뉴스</dd>
+                <dd class="modal-desc-detail">.</dd>
               </li>
               <li>
                 <dt>LINK</dt>
-                <dd>
-                  <a href="https://www.naver.com/">https://www.naver.com/</a>
+                <dd class="modal-desc-link">
                 </dd>
               </li>
             </ul>
             <div class="bar"></div>
-            <div class="modal-img">
-              <img src="./images/cn1.jpg" alt="">
-            </div>
+            <div class="modal-img"></div>
           </div>
         </div>
       </div>

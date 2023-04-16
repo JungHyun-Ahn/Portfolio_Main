@@ -22,23 +22,24 @@
     <nav class="main-nav">
       <p class="nav-title">Ahn Junghyun Portfolio</p>
       <ul>
-        <li>
-          <a href="#main">Main</a>
+        <li class="active">
+          <a href="#main-content">Main</a>
         </li>
-        <li>
-          <a href="#profile">Profile</a>
+        <li class="">
+          <a href="#profile-content">Profile</a>
         </li>
-        <li>
-          <a href="#development">Development</a>
+        <li class="">
+          <a href="#development-content">Development</a>
         </li>
-        <li>
-          <a href="#design">Design</a>
+        <li class="">
+          <a href="#design-content">Design</a>
         </li>
       </ul>
     </nav>
     <!-- Scroll text -->
     <p class="scroll-txt">
-      <em><i class="bi bi-chevron-double-left"></i></em>Scroll Down
+      <em><i class="bi bi-chevron-double-left"></i></em>
+      Scroll Down
     </p>
     <!-- Main -->
     <article id="main-content">
@@ -67,9 +68,10 @@
         </div>
       </div>
     </article>
-    <article id="banner-content">
+    <div id="banner-content">
       뭔가있으면좋을것같다
-    </article>
+      
+    </div>
     <!-- Profile -->
     <article id="profile-content">
       <h2 class="sub-title">Profile</h2>
@@ -156,12 +158,12 @@
                   </div>
                   <span>Illust</span>
                 </dd>
-                <dd>
+                <!-- <dd>
                   <div class="skill-icon">
                     <img src="/images/02_skills_figma_icon.svg" alt="Figma Icon">
                   </div>
                   <span>Figma</span>
-                </dd>
+                </dd> -->
               </dl>
             </li>
           </ul>
@@ -173,6 +175,44 @@
       <h2 class="sub-title">Development</h2>
       <h3 class="sub-title-desc">- 개발 작업물 -</h3>
       <div class="development-inner">
+        <ul class="works-items-menu development">
+          <li class="works-items-menu-list active" data-filter="*"><span>Manwol</span></li>
+          <span class="menu-line">|</span>
+          <li class="works-items-menu-list" data-filter="card-news"><span>Playlist</span></li>
+          <!-- <span class="menu-line">|</span>
+          -->
+        </ul>
+        <div class="development-items">
+          <div class="development-item">
+            <div class="development-item-inner">
+              <div class="development-item-img">
+                <img src="./images/03_development_item1.png" alt="">
+              </div>
+              <div class="development-item-desc">
+                <div class="project">
+                  <h4 class="project-name">Manwol(만월회)</h4>
+                  <p class="project-desc">
+                    카페 만월회 웹사이트 redesign<br />
+                    <span>※본 사이트는 포트폴리오 목적으로 만들어졌습니다.</span>
+                  </p>
+                  <div class="project-detail">
+                    <p>메인 컬러: 
+                      <em class="main-color" style="background-color: #142F5F;"></em>
+                      <em class="main-color" style="background-color: #F4F4F4;"></em>
+                      <em class="main-color" style="background-color: #FE5358;"></em>
+                    </p>
+                    <p>사용 언어: <span>HTML, CSS, JavaScript</span></p>
+                    <p>참여도: <span>100%</span></p>
+                  </div>
+                  <div class="project-link">
+                    <div class="project-link-btn"><span>View Origin</span></div>
+                    <div class="project-link-btn"><span>View Mine</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </article>
     <!-- Design -->
@@ -181,19 +221,18 @@
       <h3 class="sub-title-desc">- 디자인 작업물 -</h3>
       <div class="works-inner">
         <div class="works-box">
+          <ul class="works-items-menu design">
+            <li class="works-items-menu-list active" data-filter="*"><span>ALL</span></li>
+            <span class="menu-line">|</span>
+            <li class="works-items-menu-list" data-filter="card-news"><span>CARD-NEWS</span></li>
+            <span class="menu-line">|</span>
+            <li class="works-items-menu-list" data-filter="blog-skin"><span>BLOG-SKIN</span></li>
+            <span class="menu-line">|</span>
+            <li class="works-items-menu-list" data-filter="homepage"><span>HOMEPAGE</span></li>
+            <span class="menu-line">|</span>
+            <li class="works-items-menu-list" data-filter="etc"><span>ETC</span></li>
+          </ul>
           <div class="works-items">
-            <ul class="works-items-menu">
-              <li class="works-items-menu-list active" data-filter="*"><span>ALL</span></li>
-              <span class="menu-line">|</span>
-              <li class="works-items-menu-list" data-filter="card-news"><span>CARD-NEWS</span></li>
-              <span class="menu-line">|</span>
-              <li class="works-items-menu-list" data-filter="blog-skin"><span>BLOG-SKIN</span></li>
-              <span class="menu-line">|</span>
-              <li class="works-items-menu-list" data-filter="homepage"><span>HOMEPAGE</span></li>
-              <span class="menu-line">|</span>
-              <li class="works-items-menu-list" data-filter="etc"><span>ETC</span></li>
-            </ul>
-            <!-- includes/work-items.html -->
             <div class="works-item">
               <div class="item" data-type="card-news">
                 <img src="/images/04_design_item1_thum.png" alt="">

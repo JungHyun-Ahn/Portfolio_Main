@@ -20,7 +20,7 @@ html, body {
   font-weight: 800;
   color: var(--main-color);
 
-  opacity: 0;
+  /* opacity: 0; */
 }
 .sub-title-desc {
   padding-bottom: 60px;
@@ -61,7 +61,7 @@ html, body {
 }
 .main-nav p {
   color: var(--main-color);
-  font-size: var(--normal-txt-size);
+  font-size: 19px;
 }
 .main-nav ul {
   display: flex;
@@ -69,7 +69,7 @@ html, body {
 }
 .main-nav ul a {
   color: var(--light-gray);
-  font-size: var(--normal-txt-size);
+  font-size: 19px;
 }
 .main-nav ul li.active a {
   color: var(--main-color);
@@ -280,6 +280,7 @@ html, body {
 }
 .development-inner {
   width: 100%;
+  overflow: hidden;
 }
 .works-items-menu {
   margin-bottom: 40px;

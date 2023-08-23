@@ -1,0 +1,69 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+}
+.ko {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--normal-txt-color);
+}
+
+/* Font */
+/* Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Noto Sans EN */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* font-family: 'Noto Sans', sans-serif; */
+
+/* Main Title */
+@font-face {
+  font-family: 'Khyay';
+  src: url('/font/Khyay-Regular.ttf') format('truetype');
+}
+
+/* font size */
+html {
+  font-size: 62.5%;
+}
+
+/* Variables */
+:root {
+  --main-color: #003CAF;
+  --main-color-bg: #003293;
+  --sub-font-color: #70a0ff;
+  --cloudy-gray: rgba(255, 255, 255, 0.8);
+  --light-gray: #888;
+  --dark-gray: #222;
+  --normal-txt-color: #555;
+
+  --sub-title-size: 5rem;
+  --sub-title-desc-size: 2rem;
+  --normal-txt-size: 1.8rem;
+}
+
+/* Tablet Size */
+@media screen and (max-width: 1024px){
+  html {
+    font-size: 58%;
+  }
+}
+
+/* Mobile Sizd */
+@media screen and (max-width: 769px) {
+  html {
+    font-size: 54%;
+  }
+}

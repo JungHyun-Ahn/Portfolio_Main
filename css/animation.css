@@ -1,0 +1,105 @@
+/* ==== Wave Animation ==== */
+.wave-box {
+  width: 100%;
+  height: 100%;
+  position:relative;
+}
+.waves {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height:5vh;
+  min-height:100px;
+  max-height:140px;
+}
+.waves .parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.waves .parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+.waves .parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 12s;
+}
+.waves .parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 15s;
+}
+.waves .parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 22s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+/* ==== Scroll FadeIn Animation ==== */
+.scrollAni {
+  opacity: 0;
+  transform: translate(0, 30px);
+  transition: all .5s ease-out;
+}
+.scrollUp {
+  opacity: 1;
+  transform: translate(0, 0px);
+}
+
+/* ==== Main article ==== */
+/* main - title */
+.main-title-box {
+  animation: mainTitleAni 0.5s ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes mainTitleAni {
+  0% { opacity: 0; top: 55%; }
+  10% { opacity: 0; top: 55%; }
+  100% { opacity: 1; top: 50%; }
+}
+
+/* main - whale icon */
+.main-sub-title-top .whale {
+  animation: mainWhaleAni 2s cubic-bezier(0.25, 1, 0.5, 1) 0.5s ;
+  animation-fill-mode: forwards;
+}
+@keyframes mainWhaleAni {
+  0% { opacity: 0; right: 60%; }
+  100% { opacity: 1; right: 0; }
+}
+
+/* main - etc(nav, scrollIcon) */
+.main-nav, .mouseScrollIcon {
+  opacity: 0;
+  animation: mainEtcAni 0.8s ease-out 2s ;
+  animation-fill-mode: forwards;
+}
+@keyframes mainEtcAni {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* ==== Profile Article ==== */
+/* profile circle img */
+.profile-img-box .profile-top-img img{
+  animation: profileCircleImg 15s linear infinite;
+}
+@keyframes profileCircleImg {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+
+/* Mobile Size */
+@media (max-width: 768px) {
+  .waves {
+    height:50px;
+    min-height:50px;
+  }
+}
+

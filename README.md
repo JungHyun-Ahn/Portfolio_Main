@@ -1,5 +1,5 @@
 # Portfolio_Main
-![03_development_item3](https://github.com/JungHyun-Ahn/Past_Portfolio/assets/84699689/e6f1885d-e6ee-4f0a-a39b-32b8ba1d5e80)
+![main](https://github.com/JungHyun-Ahn/Portfolio_Main/assets/84699689/5b039def-68c0-4d7d-b853-1feb887ad5d5)
 
 ## 포트폴리오 사이트
 * 포트폴리오 목적으로 만들어진 사이트 입니다. 이미지 외 코드만 업로드 하였습니다.<br/>
